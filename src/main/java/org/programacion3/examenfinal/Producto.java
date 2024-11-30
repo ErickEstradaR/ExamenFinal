@@ -78,7 +78,7 @@ public class Producto {
                  + tipoActivo + ';'
                  + marca + ';' +
                  modelo + ';'  + serial + ';' +
-                  pResponsable + ";" + '.' ;
+                  pResponsable + ';';
     }
 
     public void CrearArchivo(Producto p){
@@ -103,7 +103,6 @@ public class Producto {
                     datos[3].trim(),
                     datos[4].trim(),
                     datos[5].trim()
-
             );
         }
     }

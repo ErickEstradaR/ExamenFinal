@@ -90,15 +90,20 @@ public class HelloController {
         try (BufferedReader br = new BufferedReader(new FileReader("/Users/erick/IdeaProjects/ExamenFinal/src/main/resources/org/programacion3/Archivo/productos.txt"))) {
             String linea;
             while ((linea = br.readLine()) != null) {
-                Producto producto = Producto.fromString(linea);
-                listaProd.add(producto);
+                String[] datos = linea.split(";");
+                    Producto producto = Producto.fromString(linea);
+                    listaProd.add(producto);
+
             }
         } catch (IOException e) {
             e.printStackTrace();
         }
-
         productosTABLE.setItems(listaProd);
     }
+
+
+
+
 
     @FXML
     void limpiarOnAction() {
